@@ -20,76 +20,112 @@ export const awardsIntro = "Recognition for academic and professional achievemen
 
 export const awards: Array<ActivityItemType> = [
   {
-    name: 'Outstanding Teacher Award',
+    name: 'Outstanding Contributions to Students Council',
     description: '',
-    date: '2024',
-    location: 'SCLS, Shanghai',
+    date: '2019',
+    location: 'THU McGovern Institute, Beijing',
   },
   {
-    name: 'Zhui Ying Award',
+    name: 'Excellent Student Scholarship',
+    description: '',
+    date: '2022',
+    location: 'THU, Beijing',
+  },
+  {
+    name: 'Agilent Scholarship',
+    description: '',
+    date: '2022',
+    location: 'THU, Beijing',
+  },
+  {
+    name: 'Excellent Contributions to Amgen Scholars Program',
     description: '',
     date: '2023',
-    location: 'Qingpu, Shanghai',
+    location: 'THU, Beijing',
+  },
+  {
+    name: 'Excellent Student Scholarship',
+    description: '',
+    date: '2023',
+    location: 'THU, Beijing',
+  },
+  {
+    name: 'Excellent Student Scholarship',
+    description: '',
+    date: '2024',
+    location: 'THU, Beijing',
   },
 ]
 
 // Research & Projects
 export const projectHeadLine = "Research & Projects"
-export const projectIntro = "Academic research and technical projects I've worked on."
+export const projectIntro = "Academic research and projects I've worked on."
 
 export const projects: Array<ProjectItemType> = [
   {
-    name: 'Student Final Project Portfolio',
-    description: 'Static website portfolio',
-    link: { href: 'scls-cs.com', label: 'GitHub Cards' },
-    tags: ['Website', 'Next.js', 'TailwindCSS', 'DaisyUI', 'Portfolio']
+    name: 'Claustrum Bdnf-e6 neurons mediate general anesthesia',
+    description: 'Ph.D. research',
+    link: { href: 'https://www.cell.com', label: 'Neuroscience' },
+    tags: ['General anesthesia', 'BDNF']
   },
   {
-    name: 'Seeking DNA',
-    description: '2022 SCLS Hackathon',
-    link: { href: 'https://scls-cs.gitbook.io/scls-apcs-lab/lab5-dna', label: 'Hackathon' },
-    tags: ['Hackathon', 'Java']
+    name: 'Ngfr+ cholinergic projection from SI/nBM to mPFC selectively regulates temporal order recognition memory',
+    description: 'Ph.D. research',
+    link: { href: 'https://www.nature.com/articles/s41467-024-51707-w', label: 'Neuroscience' },
+    tags: ['Ngfr', 'Temporal order recognition memory']
   },
   {
-    name: 'Texas Holdem Poker Judge',
-    description: '2024 SCLS Hackathon',
-    link: { href: 'https://onecompiler.com/challenges/42yf4n5yn/scls-hackathon', label: 'Hackathon' },
-    tags: ['Hackathon']
+    name: 'A protocol for establishing a male G×E schizophrenia mouse model',
+    description: 'Ph.D. research',
+    link: { href: 'https://star-protocols.cell.com/protocols/2169', label: 'Neuroscience' },
+    tags: ['Schizophrenia', 'Mouse model']
   },
   {
-    name: 'AI Camp Course Development',
-    description: 'Developed a comprehensive AI curriculum for high school students, incorporating real-world projects and startup concepts.',
-    link: { href: 'https://scls-cs.gitbook.io/ai-camp', label: 'View Course' },
-    tags: ['Education', 'AI']
+    name: 'Corticosterone antagonist or TrkB agonist attenuates schizophrenia-like behavior in a mouse model combining Bdnf-e6 deficiency and developmental stress',
+    description: 'Ph.D. research',
+    link: { href: 'https://www.cell.com/iscience/fulltext/S2589-0042(22)00881-1', label: 'Neuroscience' },
+    tags: ['Schizophrenia', 'BDNF']
   },
 ]
 
 // Hobbies & Volunteer
-export const activitiesHeadLine = "Hobbies & Volunteer"
-export const activitiesIntro = "Personal interests and community contributions."
+export const activitiesHeadLine = " Volunteer"
+export const activitiesIntro = "Relevant volunteer experiences."
 
 export const activities: Array<ActivityItemType> = [
   {
-    name: 'Python Workshop',
+    name: 'Tsinghua-Peking McGovern Summer Program',
     description:
-      'Teaching basic Python programming concepts to beginners. Covering variables, control flow, and functions.',
-    date: '2024-02-24',
-    location: 'Shanghai',
-    link: 'https://example.com/python-workshop',
+      'Teaching Assistant.',
+    date: '2019',
+    location: 'THU, Beijing',
+    link: '',
   },
   {
-    name: 'AI Ethics Discussion',
+    name: 'Students Council of Tsinghua McGovern Institute',
     description:
-      'A group discussion about the ethical implications of AI development and its impact on society.',
-    date: '2024-03-01',
-    location: 'Shanghai',
-    link: 'https://example.com/ai-ethics',
+      'Membership.',
+    date: '2019',
+    location: 'THU, Beijing',
+    link: 'https://mcgovern.life.tsinghua.edu.cn/en',
   },
   {
-    name: 'Code Review Session',
+    name: 'Laboratory Animal Center of Tsinghua University',
     description:
-      'Helping students improve their coding skills through peer code review and best practices sharing.',
-    date: '2024-03-15',
-    location: 'Shanghai',
+      'Facility Assistant.',
+    date: '2020-2022',
+    location: 'THU, Beijing',
+    link: 'https://www.larc.tsinghua.edu.cn/',
+  },
+  {
+    name: 'Amgen Scholars Program',
+    description:
+      'Teaching Assistant.',
+    date: '2023',
+    location: 'THU, Beijing',
+    link: 'https://tsinghuaamgenscholars.com/amgenscholars.html',
   },
 ]
+
+
+

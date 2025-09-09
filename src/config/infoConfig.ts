@@ -4,24 +4,24 @@ export * from './career'
 
 // personal info
 export const name = 'Shangjin Li'
-export const headline = 'Teacher at Shanghai Soong Ching Ling School.'
+export const headline = 'Ph.D. in Neuroscience.'
 export const introduction =
-  "Coucou Les Amis! My name is Shangjin Li. I'm from Hubei and an alumnus of BUPT, UChicago, and Tsinghua. I’ve been teaching Computer Science at SCLS since 2020."
+  "¡Hola amigos! My name is Shangjin Li. I am from Henan province, China, and I am an alumnus of CAU, NTU, and Tsinghua. "
 export const email = 'shangjinli0610@foxmail.com'
 export const githubUsername = 'guoguoxuan'
 
 // about page
-export const aboutMeHeadline = 'Who Are You and Why Should I Care?'
+export const aboutMeHeadline = 'About Me'
 export const aboutParagraphs = [
-  "Coucou Les Amis! My name is Shangjin Li. I'm from Hubei and an alumnus of BUPT, UChicago, and Tsinghua. I’ve been teaching Computer Science at SCLS since 2020.",
-  'Currently I am working on a new course called AI Camp, an innovative course where high school students create real-world products and startups while exploring the frontiers of AI.',
-  "I started this blog to share the insights I learn every day. Most blogs focus on education in Artificial Intelligence and general computer science, while others share the life lessons I've learned.",
+  "I graduated from China Agricultural University with a bachelor's degree in Biological Sciences. I then completed my Ph.D., specializing in Neuroscience, at Tsinghua University.",
+  'I have a lot of hobbies, such as playing badminton, travelling, photography, watching movies and so on.',
+  "I started this blog to share the insights I learn every day. Most blogs focus on neuroscience and general biological science, while others share the daily life.",
 ]
 
 // blog
 export const blogHeadLine = "What I've thinking about."
 export const blogIntro =
-  "I've written something about AI, programming and life."
+  "I've written something about neuroscience and life."
 
 // social links
 export type SocialLinkType = {
@@ -35,7 +35,7 @@ export const socialLinks: Array<SocialLinkType> = [
   {
     name: 'Tiktok',
     icon: 'tiktok',
-    href: 'https://www.tiktok.com/@harvard?lang=en',
+    href: 'https://www.tiktok.com/@tsinghua_university',
   },
   {
     name: 'Bilibili',
