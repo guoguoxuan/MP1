@@ -6,7 +6,7 @@ export * from './career'
 export const name = 'Shangjin Li'
 export const headline = 'Ph.D. in Neuroscience.'
 export const introduction =
-  "¡Hola amigos! My name is Shangjin Li. I am from Henan province, China, and I am an alumnus of CAU, NTU, and Tsinghua. "
+  "¡Hola amigos! My name is Shangjin Li. I am from Henan province, China, and I am an alumnus of CAU, NTU, and THU. "
 export const email = 'shangjinli0610@foxmail.com'
 export const githubUsername = 'guoguoxuan'
 

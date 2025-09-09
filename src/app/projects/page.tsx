@@ -1,10 +1,12 @@
 import { type Metadata } from 'next'
 import { SimpleLayout } from '@/components/layout/SimpleLayout'
 import { projectHeadLine, projectIntro, projects } from '@/config/infoConfig'
-import { activities } from '@/config/projects'
 import { ProjectCard } from '@/components/project/ProjectCard'
-import { ActivityCard } from '@/components/home/ActivityCard'
-import { Calendar } from 'lucide-react'
+
+// 以下导入暂时注释掉，因为相关功能被禁用
+// import { activities } from '@/config/projects'
+// import { ActivityCard } from '@/components/home/ActivityCard'
+// import { Calendar } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -25,6 +27,8 @@ export default function Projects() {
           <ProjectCard key={project.name} project={project} />
         ))}
       </ul>
+
+      {/* 以下代码暂时注释掉，不显示爱好和志愿者活动
       <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
           <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
             <Calendar size={28}/>
@@ -39,6 +43,7 @@ export default function Projects() {
             ))}
           </ul>
         </div>
+      */}
     </SimpleLayout>
   )
 }
