@@ -11,7 +11,7 @@ export type CareerItemType = {
 export const careerList: Array<CareerItemType> = [
     {
       company: 'Looking for a Postdoc position',
-      title: 'Neuroscience',
+      title: 'Neuroscience and related fields',
       logo: 'college',
       start: '2025',
       end: 'Present'

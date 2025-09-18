@@ -64,25 +64,31 @@ export const projectIntro = "Academic research and projects I've worked on."
 export const projects: Array<ProjectItemType> = [
   {
     name: 'Claustrum Bdnf-e6 neurons mediate general anesthesia',
-    description: 'Ph.D. research',
-    link: { href: 'https://www.cell.com', label: 'Neuroscience' },
+    description: 'Ph.D. research (2025)',
+    link: { href: '', label: 'Neuroscience' },
     tags: ['General anesthesia', 'BDNF']
   },
   {
     name: 'Ngfr+ cholinergic projection from SI/nBM to mPFC selectively regulates temporal order recognition memory',
-    description: 'Ph.D. research',
+    description: 'Ph.D. research (2024)',
     link: { href: 'https://www.nature.com/articles/s41467-024-51707-w', label: 'Neuroscience' },
     tags: ['Ngfr', 'Temporal order recognition memory']
   },
   {
+    name: 'Herpes simplex virus 1 accelerates the progression of Alzheimer’s disease by modulating microglial phagocytosis and activating NLRP3 pathway',
+    description: 'Ph.D. research (2024)',
+    link: { href: 'https://jneuroinflammation.biomedcentral.com/articles/10.1186/s12974-024-03166-9', label: 'Neuroscience' },
+    tags: ['Alzheimer’s disease', 'HSV']
+  },
+  {
     name: 'A protocol for establishing a male G×E schizophrenia mouse model',
-    description: 'Ph.D. research',
+    description: 'Ph.D. research (2022)',
     link: { href: 'https://star-protocols.cell.com/protocols/2169', label: 'Neuroscience' },
     tags: ['Schizophrenia', 'Mouse model']
   },
   {
     name: 'Corticosterone antagonist or TrkB agonist attenuates schizophrenia-like behavior in a mouse model combining Bdnf-e6 deficiency and developmental stress',
-    description: 'Ph.D. research',
+    description: 'Ph.D. research (2022)',
     link: { href: 'https://www.cell.com/iscience/fulltext/S2589-0042(22)00881-1', label: 'Neuroscience' },
     tags: ['Schizophrenia', 'BDNF']
   },

@@ -1,6 +1,6 @@
 import { type Metadata } from 'next'
 import { SimpleLayout } from '@/components/layout/SimpleLayout'
-import { projectHeadLine, projectIntro, projects } from '@/config/infoConfig'
+import { projectHeadLine, projectIntro, projects } from '@/config/projects'
 import { ProjectCard } from '@/components/project/ProjectCard'
 
 // 以下导入暂时注释掉，因为相关功能被禁用
