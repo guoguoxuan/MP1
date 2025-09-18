@@ -22,10 +22,11 @@ export default function About() {
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
               src={portraitImage}
-              alt=""
+              alt="Portrait photo"
               sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              className="rotate-3 rounded-2xl object-contain"
             />
+            <p className="mt-3 text-sm text-center text-zinc-600 dark:text-zinc-400 italic">Captured in Chicago, October 2024, and restyled with AI into a Studio Ghibli style.</p>
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
