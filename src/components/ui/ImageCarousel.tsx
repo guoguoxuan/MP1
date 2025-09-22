@@ -92,10 +92,10 @@ export default function ImageCarousel({
               height={image.height}
               className="object-contain w-full h-full"
             />
-            {/* 只有当前图片显示alt文本 */}
+            {/* 只有当前图片显示alt文本 - 使用dangerouslySetInnerHTML支持HTML标签 */}
             {index === currentIndex && image.alt && (
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                <p className="text-white text-sm">{image.alt}</p>
+                <p className="text-white text-sm" dangerouslySetInnerHTML={{ __html: image.alt }}></p>
               </div>
             )}
           </div>
