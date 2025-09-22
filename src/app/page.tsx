@@ -8,9 +8,9 @@ import { BlogCard } from '@/components/home/BlogCard'
 import { getAllBlogs, type BlogType } from '@/lib/blogs'
 import { ProjectCard } from '@/components/project/ProjectCard'
 import { ActivityCard } from '@/components/home/ActivityCard'
-import { projectHeadLine, projectIntro, projects, blogHeadLine, blogIntro, techIcons } from '@/config/infoConfig'
+import { projectHeadLine, projectIntro, projects, blogHeadLine, blogIntro } from '@/config/infoConfig'
 import { awards, awardsHeadLine, awardsIntro, activities, activitiesHeadLine, activitiesIntro } from '@/config/projects'
-import IconCloud from "@/components/ui/icon-cloud"
+import ThemeAwareAvatar from "@/components/ui/theme-aware-avatar"
 import { Award, Briefcase, Heart } from 'lucide-react'
 
 export default async function Home() {
@@ -31,7 +31,12 @@ export default async function Home() {
             <SocialLinks className='md:mt-24'/>
           </div>
           <div className="relative flex size-full items-center justify-center overflow-hidden w-full px-20 md:px-0 md:w-2/3 ml-auto md:mr-8">
-            <IconCloud iconSlugs={techIcons} />
+            <ThemeAwareAvatar 
+              lightSrc="/images/remy4.png" 
+              darkSrc="/images/rata.gif" 
+              alt="Profile animation" 
+              size={300} 
+            />
           </div>
         </div>
 

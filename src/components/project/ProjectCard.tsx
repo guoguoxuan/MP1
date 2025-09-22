@@ -3,21 +3,55 @@
 import { ArrowRightIcon, HashIcon } from 'lucide-react'
 import Image from 'next/image'
 import { ArrowUpRight } from '@phosphor-icons/react'
-import { ProjectItemType } from '@/config/infoConfig'
+import { ProjectItemType } from '@/config/projects'
 import { utm_source } from '@/config/siteConfig'
 import Link from 'next/link'
-import { Favicon } from "favicon-stealer";
+import { useState } from 'react';
 
 export function ProjectCard({ project, titleAs }: { project: ProjectItemType, titleAs?: keyof JSX.IntrinsicElements }) {
-  const utmLink = `https://${project.link.href}?utm_source=${utm_source}`
+  // 正确处理链接，如果已有协议则不添加https://
+  const baseUrl = project.link.href.startsWith('http') ? project.link.href : `https://${project.link.href}`;
+  const utmLink = `${baseUrl}?utm_source=${utm_source}`
   let Component = titleAs ?? 'h2'
+  
+  // 使用状态管理来处理favicon加载失败的情况
+  const [faviconError, setFaviconError] = useState(false);
+  
+  // 改进的favicon获取逻辑，增加稳定性
+  const getFaviconUrl = (urlString: string): string => {
+    try {
+      const url = new URL(urlString.startsWith('http') ? urlString : `https://${urlString}`);
+      // 使用Google的favicon服务，增加参数确保获取固定大小的图标
+      return `https://www.google.com/s2/favicons?domain=${url.hostname}&sz=64&domain_url=${encodeURIComponent(url.origin)}`;
+    } catch (error) {
+      return '';
+    }
+  };
+  
+  // 处理favicon加载错误
+  const handleFaviconError = () => {
+    setFaviconError(true);
+  };
+  
   return (
     <li className='group relative flex flex-col items-start h-full'>
       <div className="relative flex flex-col justify-between h-full w-full p-4 rounded-2xl border border-muted-foreground/20 shadow-sm transition-all group-hover:scale-[1.03] group-hover:shadow-md group-hover:bg-muted/5">
         <div className=''>
           <div className='flex flex-col sm:flex-row justify-center sm:justify-start items-start sm:items-center gap-4'>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full">
-              <Favicon url={project.link.href} />
+            <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full">
+              {/* 使用简单的img标签和Google的favicon服务，避免Promise相关问题 */}
+              {project.link.href && !faviconError ? (
+                <img 
+                  src={getFaviconUrl(project.link.href)} 
+                  alt={`${project.name} favicon`}
+                  className="h-16 w-16 rounded-full object-contain"
+                  onError={handleFaviconError}
+                />
+              ) : (
+                <div className="h-16 w-16 rounded-full bg-muted/30 flex items-center justify-center">
+                  <ArrowRightIcon size={24} className="text-muted-foreground" />
+                </div>
+              )}
             </div>
             <Component className="text-base font-semibold">
               {project.name}

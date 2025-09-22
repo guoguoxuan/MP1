@@ -81,7 +81,7 @@ export const projects: Array<ProjectItemType> = [
     tags: ['Alzheimer’s disease', 'HSV']
   },
   {
-    name: 'A protocol for establishing a male G×E schizophrenia mouse model',
+    name: 'A protocol for establishing a male G×E schizophrenia mouse model ',
     description: 'Ph.D. research (2022)',
     link: { href: 'https://star-protocols.cell.com/protocols/2169', label: 'Neuroscience' },
     tags: ['Schizophrenia', 'Mouse model']

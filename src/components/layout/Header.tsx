@@ -8,7 +8,7 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/layout/Container'
-import avatarImage from '@/images/avatar.jpg'
+import avatarImage from '@/images/brain.png'
 import { navItems } from '@/config/siteConfig'
 import { ThemeToggle } from '@/components/shared/ThemeToggle'
 import { GithubRepo } from '@/components/shared/GithubRepo'
@@ -367,7 +367,7 @@ export function Header() {
                         transform: 'var(--avatar-hi-transform)'
                       }}
                     >
-                      Hi,{' '}
+                      Hi, 
                       <TypingAnimation
                         className="text-3xl md:text-6xl font-bold tracking-tight"
                         text={`I'm ${name} `}

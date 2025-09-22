@@ -21,7 +21,7 @@ export type EducationItemType = {
     },
     {
       school: 'National Taiwan University',
-      major: 'B.Sc. in Life Science',
+      major: 'Exchange Program in Life Science',
       logo: 'college',
       start: '2016',
       end: '2017'

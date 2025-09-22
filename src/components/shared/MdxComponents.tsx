@@ -1,6 +1,7 @@
 import { type MDXComponents } from 'mdx/types'
 import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
+import ImageCarousel from '@/components/ui/ImageCarousel'
 
 const CustomLink = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
   const href = props.href
@@ -35,6 +36,7 @@ export const mdxComponents: MDXComponents = {
   Image: (props: ImageProps) => (
     <Image {...props} className="my-6 rounded-3xl" />
   ),
+  ImageCarousel,
   a: CustomLink,
   h1: (props: any) => (
     <h1
