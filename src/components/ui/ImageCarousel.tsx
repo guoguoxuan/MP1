@@ -75,7 +75,7 @@ export default function ImageCarousel({
   }
 
   return (
-    <div className={cn('relative w-full max-w-md mx-auto overflow-hidden rounded-xl', className)}>
+    <div className={cn('relative w-full max-w-xl mx-auto overflow-hidden rounded-xl', className)}>
       {/* 主图片容器 */}
       <div className="relative aspect-square w-full bg-muted">
         {/* 当前显示的图片 */}
@@ -95,7 +95,7 @@ export default function ImageCarousel({
             {/* 只有当前图片显示alt文本 - 使用dangerouslySetInnerHTML支持HTML标签 */}
             {index === currentIndex && image.alt && (
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                <p className="text-white text-sm" dangerouslySetInnerHTML={{ __html: image.alt }}></p>
+                <p className="text-white text-sm leading-tight" dangerouslySetInnerHTML={{ __html: image.alt }}></p>
               </div>
             )}
           </div>
