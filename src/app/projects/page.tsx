@@ -24,7 +24,7 @@ export default function Projects() {
         className="flex flex-col gap-6 pb-10"
       >
         {projects.map((project) => (
-          <ProjectCard key={project.name} project={project} showImage={true} />
+          <ProjectCard key={project.name} project={project} />
         ))}
       </ul>
 
