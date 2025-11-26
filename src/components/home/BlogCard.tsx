@@ -18,10 +18,10 @@ export function BlogCard({ blog, titleAs }: { blog: BlogType, titleAs?: keyof JS
                 <Card.Eyebrow as="time" dateTime={blog.date} decorate>
                   {formatDate(blog.date)}
                 </Card.Eyebrow>
-                <Card.Title as={as} style={{ wordWrap: 'break-word', hyphens: 'auto', lineHeight: 1.3 }}>
-                  {blog.title}
+                <Card.Title as={as}>
+                  <span className="break-words hyphens-auto leading-tight">{blog.title}</span>
                 </Card.Title>
-                <Card.Description style={{ wordWrap: 'break-word', hyphens: 'auto', lineHeight: 1.4 }}>
+                <Card.Description className="break-words hyphens-auto leading-relaxed">
                   {blog.description}
                 </Card.Description>
                 <Card.Cta className="mt-2">Read blog</Card.Cta>
