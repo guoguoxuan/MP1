@@ -9,6 +9,7 @@ export type BlogType = {
   author: string
   date: string
   slug: string
+  image?: string
 }
 
 async function importBlog(

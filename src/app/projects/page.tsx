@@ -1,7 +1,7 @@
 import { type Metadata } from 'next'
 import { SimpleLayout } from '@/components/layout/SimpleLayout'
 import { projectHeadLine, projectIntro, projects } from '@/config/projects'
-import { ProjectCard } from '@/components/project/ProjectCard'
+import ProjectCard from '@/components/project/ProjectCard'
 
 // 以下导入暂时注释掉，因为相关功能被禁用
 // import { activities } from '@/config/projects'
@@ -21,10 +21,10 @@ export default function Projects() {
     >
       <ul
         role="list"
-        className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 pb-10"
+        className="flex flex-col gap-6 pb-10"
       >
         {projects.map((project) => (
-          <ProjectCard key={project.name} project={project} />
+          <ProjectCard key={project.name} project={project} showImage={true} />
         ))}
       </ul>
 

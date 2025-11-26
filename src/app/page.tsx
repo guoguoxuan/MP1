@@ -5,8 +5,9 @@ import Education from '@/components/home/Education'
 import SocialLinks from '@/components/home/SocialLinks'
 import { headline, introduction } from '@/config/infoConfig'
 import { BlogCard } from '@/components/home/BlogCard'
+import BlogCarousel from '@/components/home/BlogCarousel'
 import { getAllBlogs, type BlogType } from '@/lib/blogs'
-import { ProjectCard } from '@/components/project/ProjectCard'
+import ProjectCard from '@/components/project/ProjectCard'
 import { ActivityCard } from '@/components/home/ActivityCard'
 import { projectHeadLine, projectIntro, projects, blogHeadLine, blogIntro } from '@/config/infoConfig'
 import { awards, awardsHeadLine, awardsIntro, activities, activitiesHeadLine, activitiesIntro } from '@/config/projects'
@@ -15,6 +16,7 @@ import { Award, Briefcase, Heart } from 'lucide-react'
 
 export default async function Home() {
   let blogList = (await getAllBlogs()).slice(0, 4)
+  console.log('Blog data loaded:', blogList.length, blogList)
 
   return (
     <>
@@ -51,7 +53,7 @@ export default async function Home() {
           </p>
           <ul
             role="list"
-            className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
+            className="space-y-6"
           >
             {projects.map((project) => (
               <ProjectCard key={project.name} project={project} titleAs='h3'/>
@@ -69,8 +71,8 @@ export default async function Home() {
             role="list"
             className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
           >
-            {awards.map((award) => (
-              <ActivityCard key={award.name} activity={award} titleAs='h3'/>
+            {awards.map((award, index) => (
+              <ActivityCard key={`${award.name}-${award.date}-${index}`} activity={award} titleAs='h3'/>
             ))}
           </ul>
         </div>
@@ -88,8 +90,8 @@ export default async function Home() {
             role="list"
             className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
           >
-            {activities.map((activity) => (
-              <ActivityCard key={activity.name} activity={activity} titleAs='h3'/>
+            {activities.map((activity, index) => (
+              <ActivityCard key={`${activity.name}-${activity.date}-${index}`} activity={activity} titleAs='h3'/>
             ))}
           </ul>
         </div>
@@ -103,17 +105,11 @@ export default async function Home() {
             {blogIntro}
           </p>
         </div>
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          {/* left column */}
-          {/* blog */}
-          <div className="flex flex-col gap-16">
-            {blogList.map((blog: BlogType) => (
-              <BlogCard key={blog.slug} blog={blog} titleAs='h3'/>
-            ))}
-          </div>
-
-          {/* right column */}
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
+        <div className="mx-auto max-w-xl lg:max-w-none mb-16">
+          <BlogCarousel blogs={blogList} />
+        </div>
+        <div className="mx-auto max-w-xl lg:max-w-none mt-16">
+          <div className="space-y-10">
             <Career />
             <Education />
           </div>

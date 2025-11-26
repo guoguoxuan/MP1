@@ -28,7 +28,7 @@ Card.Link = function CardLink({
 }: React.ComponentPropsWithoutRef<typeof Link>) {
   return (
     <>
-      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 transition group-hover:scale-100 sm:-inset-x-6 sm:rounded-2xl group-hover:bg-muted/50 " />
+      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 transition group-hover:scale-100 sm:-inset-x-6 sm:rounded-2xl" />
       <Link {...props}>
         <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
@@ -56,21 +56,23 @@ Card.Title = function CardTitle<T extends React.ElementType = 'h2'>({
 
 Card.Description = function CardDescription({
   children,
+  className,
 }: {
   children: React.ReactNode
+  className?: string
 }) {
   return (
-    <p className="relative z-10 mt-2 text-sm text-muted-foreground">
+    <p className={clsx("relative z-10 mt-2 text-sm text-muted-foreground", className)}>
       {children}
     </p>
   )
 }
 
-Card.Cta = function CardCta({ children }: { children: React.ReactNode }) {
+Card.Cta = function CardCta({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
     <div
       aria-hidden="true"
-      className="relative z-10 mt-4 flex items-center text-sm font-medium text-primary"
+      className={clsx("relative z-10 mt-4 flex items-center text-sm font-medium text-primary", className)}
     >
       {children}
       <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />

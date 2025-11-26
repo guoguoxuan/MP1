@@ -45,7 +45,7 @@ export default function ThemeAwareAvatar({
     >
       {/* 动画背景光晕 - 移除了圆框 */}
       <div 
-        className={`absolute inset-0 blur-lg transition-all duration-300`}
+        className={`absolute inset-0 blur-lg transition-all duration-300 rounded-xl`}
         style={{ 
           background: theme === "dark" 
             ? "linear-gradient(to-r, #6366f1, #8b5cf6)" 
@@ -61,7 +61,7 @@ export default function ThemeAwareAvatar({
           alt={alt}
           width={size * 1.2}
           height={size * 1.2}
-          className="object-cover"
+          className="object-cover rounded-xl"
           unoptimized
         />
       </div>
